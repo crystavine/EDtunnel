@@ -1,22 +1,16 @@
-name = "my4"
+name = "my5"
 main = "src/_worker-vless.js"
 compatibility_date = "2023-05-26"
 
 [[routes]] 
-pattern = "shopee.co.id.my4.tebel.cfd"
+pattern = "shopee.co.id.my5.tebel.cfd"
 zone_name = "tebel.cfd"
 
 [[routes]]
-pattern = "my4.tebel.cfd"
+pattern = "my5.tebel.cfd"
 zone_name = "tebel.cfd"
 
-[[routes]] 
-pattern = "shopee.co.id.my4.tebel.cfd"
-custom_domain = true
 
-[[routes]]
-pattern = "my4.tebel.cfd"
-custom_domain = true
 
 
 [vars]
