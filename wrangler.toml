@@ -1,7 +1,4 @@
-name = "apasi" # todo
-#name = "cf-worker-connect-test" # todo
-#main = "test/worker/cf-cdn-cgi-trace2.js"
-#main = "test/worker/worker-connect-test.js"
+name = "apasi"
 main = "src/_worker-vless.js"
 compatibility_date = "2023-05-26"
 
@@ -9,10 +6,6 @@ compatibility_date = "2023-05-26"
 
 
 [vars]
-# UUID = "d342d11e-d424-4583-b36e-524ab1f0afa5"
 PROXYIP = "103.75.188.126"
-# DNS_RESOLVER_URL = "https://dns.google/dns-query"
-# NODE_ID = "1"
-# API_TOKEN = "example_dev_token"
-# API_HOST = "api.v2board.com"
+DNS_NYA = "https://dns.google/dns-query"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
