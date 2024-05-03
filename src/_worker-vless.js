@@ -4,9 +4,11 @@ import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = '';
 
 let proxyIP = '';
+
+let dohURL = 'dns.adguard.com/dns-query';
 
 
 if (!isValidUUID(userID)) {
@@ -24,6 +26,7 @@ export default {
 		try {
 			userID = env.UUID || userID;
 			proxyIP = env.PROXYIP || proxyIP;
+			dohURL = env.DNS_NYA || dohURL;
 			const upgradeHeader = request.headers.get('Upgrade');
 			if (!upgradeHeader || upgradeHeader !== 'websocket') {
 				const url = new URL(request.url);
@@ -554,7 +557,7 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
 	// only handle dns udp for now
 	transformStream.readable.pipeTo(new WritableStream({
 		async write(chunk) {
-			const resp = await fetch('https://1.1.1.1/dns-query',
+			const resp = await fetch(dohURL,
 				{
 					method: 'POST',
 					headers: {
@@ -620,20 +623,21 @@ ${vlessNTLS}
 
 CONFIG OPENCLASH
 ---------------------------------------------------------------
-- name: VLESS BODONG
-  type: vless
-  server: ${hostName}
-  port: 443
-  uuid: ${userID}
-  chiper: auto
-  network: ws
-  tls: true
-  udp: false
-  sni: ${hostName}
-  ws-opts:
-    path: "/vless-bodong"
-    headers:
-      host: ${hostName}
+  - name: VLESS BODONG
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true
 ---------------------------------------------------------------
 ################################################################`;
 
