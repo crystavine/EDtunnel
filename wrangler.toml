@@ -1,19 +1,25 @@
-name = "my5"
-main = "src/_worker-vless.js"
+name = "my3"
+main = "_worker.js"
 compatibility_date = "2023-05-26"
 
 [[routes]] 
-pattern = "shopee.co.id.my5.tebel.cfd"
+pattern = "shopee.co.id.my3.tebel.cfd"
 zone_name = "tebel.cfd"
 
 [[routes]]
-pattern = "my5.tebel.cfd"
+pattern = "my3.tebel.cfd"
 zone_name = "tebel.cfd"
 
+[[routes]] 
+pattern = "shopee.co.id.my3.tebel.cfd"
+custom_domain = true
 
+[[routes]]
+pattern = "my3.tebel.cfd"
+custom_domain = true
 
 
 [vars]
-PROXYIP = "103.161.133.155"
+PROXYIP = "124.217.225.194"
 DNS_NYA = "https://dns.adguard.com/dns-query"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
