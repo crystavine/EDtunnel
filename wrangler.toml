@@ -20,6 +20,6 @@ custom_domain = true
 
 
 [vars]
-PROXYIP = "210.186.12.241"
+PROXYIP = "103.161.133.155"
 DNS_NYA = "https://dns.adguard.com/dns-query"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
