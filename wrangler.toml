@@ -1,11 +1,25 @@
-name = "apasi"
+name = "amz"
 main = "src/_worker-vless.js"
 compatibility_date = "2023-05-26"
 
+[[routes]] 
+pattern = "shopee.co.id.amz.tebel.cfd"
+zone_name = "tebel.cfd"
 
+[[routes]]
+pattern = "amz.tebel.cfd"
+zone_name = "tebel.cfd"
+
+[[routes]] 
+pattern = "shopee.co.id.amz.tebel.cfd"
+custom_domain = true
+
+[[routes]]
+pattern = "amz.tebel.cfd"
+custom_domain = true
 
 
 [vars]
-PROXYIP = "103.75.188.126"
-DNS_NYA = "https://dns.google/dns-query"
+PROXYIP = "52.74.101.26"
+DNS_NYA = "https://dns.adguard.com/dns-query"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
