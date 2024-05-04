@@ -13,7 +13,6 @@ let พร็อกซีไอพี = พร็อกซีไอพีs[Math.
 // let พร็อกซีไอพี = 'cdn.xn--b6gac.eu.org';
 // ipv6 พร็อกซีไอพี example remove comment to use
 // let พร็อกซีไอพี = "[2a01:4f8:c2c:123f:64:5:6810:c55a]"
-
 let dohURL = 'https://dns.adguard.com/dns-query';
 
 if (!isValidUUID(userID)) {
@@ -708,7 +707,7 @@ function getวเลสConfig(userIDs, hostName) {
 	const userIDArray = userIDs.split(",");
 
 	// Prepare output string for each userID
-	const output = userIDArray.map((userID) => {
+	const output = userIDArray.map((userID) => {   
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPartt;
 		const opclash = `  - name: VLESS BODONG
@@ -726,24 +725,25 @@ function getวเลสConfig(userIDs, hostName) {
       headers:
         Host: ${hostName}
     udp: true`;
-    
-		return `<center><h2>VLESS CLOUDFLARE FREE</h2>${hashSeparator}</center>
----------------------------------------------------------------
-Vless port 443
----------------------------------------------------------------
+		return `
+		<center><h2>VLESS CLOUDFLARE FREE</h2></center>
+===========================================
+× Vless port 443
+===========================================
 ${วเลสMain}
 <button onclick='copyToClipboard("${วเลสMain}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
----------------------------------------------------------------
-Vless port 80
----------------------------------------------------------------
+===========================================
+× Vless port 80
+===========================================
 ${วเลสSec}
 <button onclick='copyToClipboard("${วเลสSec}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
-------------------------------------------------------------
-Config Openclash
----------------------------------------------------------------
+===========================================
+× Config Openclash
+===========================================
 ${opclash}
-<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>
-  <div hidden id="code">
+<button onclick='copyclash()'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="code">
   - name: VLESS BODONG
     server: ${hostName}
     port: 443
@@ -760,7 +760,7 @@ ${opclash}
         Host: ${hostName}
     udp: true
   </div>  
-<center>${hashSeparator}</center>`;
+`;
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
 	const subbestip = `https://${hostName}/bestip/${userIDArray[0]}`;
@@ -775,7 +775,7 @@ ${opclash}
 	<title>VLESS CLOUDFLARE FREE</title>
 	<meta name='description' content='This is a tool for generating วเลส protocol configurations. Give us a star on GitHub https://github.com/3Kmfi6HP/EDtunnel if you found it useful!'>
 	<meta name='keywords' content='EDtunnel, cloudflare pages, cloudflare worker, severless'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property='og:site_name' content='VLESS CF FREE configuration' />
 	<meta property='og:type' content='website' />
 	<meta property='og:title' content='VLESS CF FREE configuration and subscribe output' />
@@ -791,11 +791,15 @@ ${opclash}
 	<meta property='og:image:height' content='1500' />
 
 	<style>
+	
 	body {
 	  font-family: Arial, sans-serif;
 	  background-color: #f0f0f0;
 	  color: #333;
 	  padding: 10px;
+	  max-width: 100%; /* Menetapkan lebar maksimum untuk body */
+        margin-left: auto;
+        margin-right: auto;
 	}
 
 	a {
@@ -830,7 +834,11 @@ ${opclash}
 		background-color: #282a36;
 		border-color: #6272a4;
 	  }
+	  
 	}
+	
+	
+	
 	</style>
 
 	<!-- Add FontAwesome library -->
@@ -913,6 +921,4 @@ function สร้างวเลสSub(ไอดีผู้ใช้_เส้
 	return ผลลัพธ์.join('\n');
 }
 
-const cn_hostnames = [
-	't.me/trust_bodong',
-];
+let cn_hostnames = ['t.me/trust_bodong'];
