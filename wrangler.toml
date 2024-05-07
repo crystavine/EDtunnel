@@ -1,13 +1,13 @@
-name = "akm"
+name = "akr"
 main = "_worker.js"
 compatibility_date = "2023-05-26"
 
 [[routes]] 
-pattern = "shopee.co.id.sg2.vapoor.cfd"
+pattern = "shopee.co.id.sg3.vapoor.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "sg2.vapoor.cfd"
+pattern = "sg3.vapoor.cfd"
 custom_domain = true
 
 
@@ -15,6 +15,6 @@ custom_domain = true
 
 
 [vars]
-PROXYIP = "139.162.24.91"
+PROXYIP = "103.190.179.28"
 DNS_NYA = "https://dns.adguard.com/dns-query"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
