@@ -24,7 +24,7 @@ const worker_default = {
 				switch (url.pathname) {
 					case "/link":
 						const host = request.headers.get('Host');
-						return new Response(`===========================================\n× TROJAN CLOUDFLARE FREE × \n===========================================\n\ntrojan://${sha224Password}@${host}:443?type=ws&host=${host}&path=%2Ftrojan-bodong&security=tls&sni=${host}#TROJAN BODONG FREE\n\n===========================================`, {
+						return new Response(`===========================================\n× TROJAN CLOUDFLARE FREE × \n===========================================\n\ntrojan://${password}@${host}:443?type=ws&host=${host}&path=%2Ftrojan-bodong&security=tls&sni=${host}#TROJAN BODONG FREE\n\n===========================================`, {
 							status: 200,
 							headers: {
 								"Content-Type": "text/html;charset=utf-8",
