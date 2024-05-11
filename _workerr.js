@@ -2,7 +2,8 @@
 // src/worker.js
 // https://github.com/ca110us/epeius/blob/main/src/worker.js
 import { connect } from "cloudflare:sockets";
-let sha224Password = "bodongvpn";
+let password = "bodongvpn";
+let sha224Password ;
 let proxyIP = "cdn.xn--b6gac.eu.org";
 
 const worker_default = {
@@ -15,7 +16,8 @@ const worker_default = {
 	async fetch(request, env, ctx) {
 		try {
 			proxyIP = env.PROXYIP || proxyIP;
-			sha224Password = env.PASSWORD || sha224Password;
+			password = env.PASSWORD || password;
+			sha224Password = env.SHA224 || env.SHA224PASS || sha256.sha224(password);
 			const upgradeHeader = request.headers.get("Upgrade");
 			if (!upgradeHeader || upgradeHeader !== "websocket") {
 				const url = new URL(request.url);
@@ -25,7 +27,7 @@ const worker_default = {
 						return new Response(`===========================================\n× TROJAN CLOUDFLARE FREE × \n===========================================\n\ntrojan://${sha224Password}@${host}:443?type=ws&host=${host}&path=%2Ftrojan-bodong&security=tls&sni=${host}#TROJAN BODONG FREE\n\n===========================================`, {
 							status: 200,
 							headers: {
-								"Content-Type": "text/plain;charset=utf-8",
+								"Content-Type": "text/html;charset=utf-8",
 							}
 						});
 					default:
