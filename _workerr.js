@@ -16,8 +16,8 @@ const worker_default = {
      */
     async fetch(request, env, ctx) {
         try {
-            proxyIP = env.proxyip || proxyIP;
-            Pswd = env.pswd || Pswd
+            proxyIP = env.PROXYIP || proxyIP;
+            Pswd = env.PASSWORD || Pswd
             sha224Password = sha256.sha224(Pswd);
             const upgradeHeader = request.headers.get("Upgrade");
             if (!upgradeHeader || upgradeHeader !== 'websocket') {
@@ -369,78 +369,24 @@ export {
     default
 };
  
+ //#trojan://7956ffb0-1129-11ef-9f6e-1239d0255272@sg-4.test3.net:443?path=%2Fhowdy&security=tls&host=sg-4.test3.net&type=ws&sni=shopee.co.id#MELBI
 //# sourceMappingURL=worker.js.map
 function gettrojanConfig(Pswd, hostName) {
-	const wtrojanws = `trojan://${Pswd}\u0040www.visa.com.sg:8880?security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#${hostName}`;
-	const ptrojanwstls = `trojan://${Pswd}\u0040www.visa.com.sg:8443?security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=%2F%3Fed%3D2560#${hostName}`;
-    const note = `甬哥博客地址：https://ygkkk.blogspot.com\n甬哥YouTube频道：https://www.youtube.com/@ygkkk\n甬哥TG电报群组：https://t.me/+jZHc6-A-1QQ5ZGVl\n甬哥TG电报频道：https://t.me/+DkC9ZZUgEFQzMTZl\n\n\n正在使用的ProxyIP：${proxyIP}`;
+	
+	const trojantls = `trojan://${Pswd}\u0040${hostName}:443?security=tls&type=ws&host=shopee.co.id.${hostName}&sni=shopee.co.id.${hostName}&fp=random&path=%2Fvless-bodong#TROJAN-BODONG`;
+	
+    const note = `===========================================\n× TROJAN CLOUDFLARE FREE × \n===========================================`;
   
-    if (hostName.includes('pages.dev')) {
+    if (hostName.includes('shopee.co.id')) {
     return `
-==========================配置详解==============================
-
-${note}
-
-################################################################
-CF-pages-trojan+ws+tls节点，分享链接如下：
-
-${ptrojanwstls}
-
----------------------------------------------------------------
-注意：如果 ${hostName} 在本地网络打不开（中国移动用户注意），客户端必须开启切片功能
----------------------------------------------------------------
-客户端必要文明参数如下：
-客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP（反代IP必须与反代端口对应）
-端口(port)：6个https端口可任意选择(443、8443、2053、2083、2087、2096)
-密码：${Pswd}
-传输协议(network)：ws 或者 websocket
-伪装域名(host)：${hostName}
-路径(path)：/?ed=2560
-传输安全(TLS)：开启
-跳过证书验证(allowlnsecure)：false
-################################################################
 `;
   } else {
     return `
-==========================配置详解==============================
-
 ${note}
 
-################################################################
-一、CF-workers-trojan+ws节点，分享链接如下：
+${trojantls}
 
-${wtrojanws}
-
----------------------------------------------------------------
-注意：当前节点无需使用CF解析完成的域名，客户端选项的TLS选项必须关闭
----------------------------------------------------------------
-客户端必要文明参数如下：
-客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP（反代IP必须与反代端口对应）
-端口(port)：7个http端口可任意选择(80、8080、8880、2052、2082、2086、2095)
-密码：${Pswd}
-传输协议(network)：ws 或者 websocket
-伪装域名(host)：${hostName}
-路径(path)：/?ed=2560
-################################################################
-
-################################################################
-二、CF-workers-trojan+ws+tls 或者 CF-pages-trojan+ws+tls节点，分享链接如下：
-
-${ptrojanwstls}
-
----------------------------------------------------------------
-注意：使用workers域名开启TLS，客户端必须开启切片功能
----------------------------------------------------------------
-客户端必要文明参数如下：
-客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP（反代IP必须与反代端口对应）
-端口(port)：6个https端口可任意选择(443、8443、2053、2083、2087、2096)
-密码：${Pswd}
-传输协议(network)：ws 或者 websocket
-伪装域名(host)：${hostName}
-路径(path)：/?ed=2560
-传输安全(TLS)：开启
-跳过证书验证(allowlnsecure)：false
-################################################################
+===========================================
 `;
   }
 }
