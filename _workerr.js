@@ -16,8 +16,8 @@ const worker_default = {
      */
     async fetch(request, env, ctx) {
         try {
-            proxyIP = env.PROXYIP || proxyIP;
-            Pswd = env.PASSWORD || Pswd
+            proxyIP = env.proxyip || proxyIP;
+            Pswd = env.pswd || Pswd
             sha224Password = sha256.sha224(Pswd);
             const upgradeHeader = request.headers.get("Upgrade");
             if (!upgradeHeader || upgradeHeader !== 'websocket') {
