@@ -1,5 +1,5 @@
 name = "my3"
-main = "_workerr.js"
+main = "_workervli.js"
 compatibility_date = "2023-05-26"
 
 
@@ -8,4 +8,5 @@ compatibility_date = "2023-05-26"
 
 [vars]
 PROXYIP = "124.217.225.194"
-PASSWORD = "bodongvpn"
+UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
+DNS_NYA = "https://dns.adguard.com/dns-query"
