@@ -527,7 +527,6 @@ ${ptrojanwstls}
   };
 
   var nodeWrap = function (method, is224) {
-    var crypto = require('crypto')
     var Buffer = require('buffer').Buffer;
     var algorithm = is224 ? 'sha224' : 'sha256';
     var bufferFrom;
@@ -540,7 +539,7 @@ ${ptrojanwstls}
     }
     var nodeMethod = function (message) {
       if (typeof message === 'string') {
-        return crypto.createHash(algorithm).update(message, 'utf8').digest('hex');
+        return 
       } else {
         if (message === null || message === undefined) {
           throw new Error(ERROR);
@@ -550,7 +549,7 @@ ${ptrojanwstls}
       }
       if (Array.isArray(message) || ArrayBuffer.isView(message) ||
         message.constructor === Buffer) {
-        return crypto.createHash(algorithm).update(bufferFrom(message)).digest('hex');
+        return 
       } else {
         return method(message);
       }
