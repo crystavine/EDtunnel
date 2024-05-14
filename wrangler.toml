@@ -1,7 +1,6 @@
 name = "test"
 main = "_workervl.js"
 compatibility_date = "2023-05-26"
-workers_dev = true
 
 [[routes]] 
 pattern = "shopee.co.id.test.freevpn.biz.id"
