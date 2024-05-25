@@ -1,15 +1,7 @@
-name = "test"
+name = "sg1"
 main = "_workervl.js"
 compatibility_date = "2023-05-26"
 
-
-[[routes]]
-pattern = "test.blondies.cfd"
-custom_domain = true
-
-[[routes]]
-pattern = "*.blondies.cfd"
-zone_name ="blondies.cfd"
 
 
 [vars]
