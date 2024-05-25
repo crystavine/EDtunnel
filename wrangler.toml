@@ -2,16 +2,13 @@ name = "test"
 main = "_workervl.js"
 compatibility_date = "2023-05-26"
 
-[[routes]] 
-pattern = "shopee.co.id.test.blondies.cfd"
-custom_domain = true
 
 [[routes]]
 pattern = "test.blondies.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "*.test.blondies.cfd"
+pattern = "*.blondies.cfd"
 zone_name ="blondies.cfd"
 
 
