@@ -1,13 +1,13 @@
-name = "sg1"
+name = "my1"
 main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "sg1.freevpn.biz.id"
+pattern = "my1.freevpn.biz.id"
 custom_domain = true
 
 
 [vars]
-PROXYIP = "143.198.89.162"
+PROXYIP = "103.75.188.126"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
 DNS_RESOLVER_URL = "https://dns.google.com/dns-query"
