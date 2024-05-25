@@ -1,6 +1,6 @@
 name = "sg1"
 main = "_workervl.js"
-compatible-date = "2024-02-12"
+compatibility-date = "2024-05-13"
 
 [[routes]]
 pattern = "sg1.freevpn.biz.id"
