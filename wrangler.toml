@@ -7,7 +7,7 @@ pattern = "sg1.freevpn.biz.id"
 custom_domain = true
 
 [[routes]]
-pattern = "dl.dir.freefiremobile.com.sg1.freevpn.biz.id"
+pattern = "quiz.staging.vidio.com.sg1.freevpn.biz.id"
 custom_domain = true
 
 
