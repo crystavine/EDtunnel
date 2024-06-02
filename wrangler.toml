@@ -1,13 +1,13 @@
-name = "my1"
+name = "tes"
 main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "my1.freevpn.biz.id"
+pattern = "tes.freevpn.biz.id"
 custom_domain = true
 
 [[routes]]
-pattern = "quiz.staging.vidio.com.my1.freevpn.biz.id"
+pattern = "quiz.staging.vidio.com.tes.freevpn.biz.id"
 custom_domain = true
 
 
