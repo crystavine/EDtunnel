@@ -7,7 +7,7 @@ pattern = "tes.freevpn.biz.id"
 custom_domain = true
 
 [[routes]]
-pattern = "quiz.staging.vidio.com.tes.freevpn.biz.id"
+pattern = "support.zoom.us.tes.freevpn.biz.id"
 custom_domain = true
 
 
