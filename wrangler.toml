@@ -1,17 +1,17 @@
-name = "tes"
+name = "sg1"
 main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "tes.freevpn.biz.id"
+pattern = "sg1.freevpn.biz.id"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.tes.freevpn.biz.id"
+pattern = "support.zoom.us.sg1.freevpn.biz.id"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.tes.freevpn.biz.id"
+pattern = "graph.instagram.com.sg1.freevpn.biz.id"
 custom_domain = true
 
 
