@@ -10,8 +10,11 @@ custom_domain = true
 pattern = "support.zoom.us.tes.freevpn.biz.id"
 custom_domain = true
 
+[[routes]]
+pattern = "graph.instagram.com.tes.freevpn.biz.id"
+custom_domain = true
+
 
 [vars]
 PROXYIP = "128.199.228.44"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
-DNS_RESOLVER_URL = "https://dns.google.com/dns-query"
