@@ -3,15 +3,15 @@ main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "my1.porfuse.cfd"
+pattern = "my1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.my1.porfuse.cfd"
+pattern = "support.zoom.us.my1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.my1.porfuse.cfd"
+pattern = "graph.instagram.com.my1.porpuse.cfd"
 custom_domain = true
 
 
