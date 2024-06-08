@@ -3,15 +3,15 @@ main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "my1.freevpn.biz.id"
+pattern = "my1.porfuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.my1.freevpn.biz.id"
+pattern = "support.zoom.us.my1.porfuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.my1.freevpn.biz.id"
+pattern = "graph.instagram.com.my1.porfuse.cfd"
 custom_domain = true
 
 
