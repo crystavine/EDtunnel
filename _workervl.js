@@ -1029,14 +1029,14 @@ ${opclashnetf}
       path: /vless-bodong
       headers:
         Host: ${bugnetf}.${hostName}
-    udp: true  </div> </div>
+    udp: true  </div> </div> <div hidden class="divContent" id="soon"> <center><h2>Coming Soon.</h2></center>
     <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
 <button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
 <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button><br>
 <button class="button" onclick="showText('cfgxcln')">Vless Xcl Tanpa Addon</button><br>
 <button class="button" onclick="showText('cfgnetf')">Vless Netflix</button><br>
-<button class="button" onclick="showText('Coming Soon.')">Vless Tsel Ilped</button><br>
-<button class="button" onclick="showText('Coming Soon.')">Vless Isat Edu</button><br>
+<button class="button" onclick="showText('soon')">Vless Tsel Ilped</button><br>
+<button class="button" onclick="showText('soon')">Vless Isat Edu</button><br>
 <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
