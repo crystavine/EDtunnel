@@ -695,10 +695,12 @@ const ed = 'RUR0dW5uZWw=';
 const namebiz ='VLESS-BIZ';
 const namevid = 'VLESS-VIDIO';
 const namexcl = 'VLESS-XCL';
+const namenetf = 'VLESS-NETFLIX';
 const bugvidio = 'quiz.staging.vidio.com';
 const bugbiz = 'support.zoom.us';
 const bugxcl = 'graph.instagram.com';
 const bugxcln = 'ava.game.naver.com';
+const bugnetf = 'cache.netflix.com';
 /**
  *
  * @param {string} userID - single or comma separated userIDs
@@ -718,6 +720,9 @@ function getวเลสConfig(userIDs, hostName) {
 //XCL No Addon
     const commonUrlXcln = `:443?encryption=none&security=tls&sni=ava.game.naver.com.${hostName}&fp=randomized&type=ws&host=ava.game.naver.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
 	const commonUrlXclln = `:80?encryption=none&security=none&type=ws&host=ava.game.naver.com.${hostName}&path=%2Fvless-bodong#${namexcl}`;
+//NETFLIX
+	const commonUrlNetf = `:443?encryption=none&security=tls&sni=${bugnetf}.${hostName}&fp=randomized&type=ws&host=${bugnetf}.${hostName}&path=%2Fvless-bodong#${namenetf}`;
+	const commonUrlNetff = `:80?encryption=none&security=none&type=ws&host=${bugnetf}.${hostName}&path=%2Fvless-bodong#${namenetf}`;
 
 	const hashSeparator = "################################################################";
 	
@@ -804,6 +809,25 @@ function getวเลสConfig(userIDs, hostName) {
       headers:
         Host: ava.game.naver.com.${hostName}
     udp: true`;
+    
+     // SETTINGAN NETFLIX
+        const vlessnetf = atob(pt) + '://' + userID + atob(at) + bugnetf + commonUrlNetf;
+		const vlessnetff = atob(pt) + '://' + userID + atob(at) + bugnetf + commonUrlNetff;
+		const opclashnetf = `  - name: ${namenetf}
+    server: ${bugnetf}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${bugnetf}.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${bugnetf}.${hostName}
+    udp: true`;
 /*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
 
 const vlesssbiz = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
@@ -816,7 +840,7 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
 */    
 
 		
-    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes(bugxcln))
+    if (hostName.includes('support.zoom.us') || hostName.includes('graph.instagram.com') || hostName.includes(bugxcln) || hostName.includes(bugnetf))
     {    
 return `
 Gak Ada apa apa disini :).
@@ -969,11 +993,48 @@ ${opclashxcln}
       path: /vless-bodong
       headers:
         Host: ava.game.naver.com.${hostName}
+    udp: true  </div> </div> <div hidden class="divContent" id="cfgnetf"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket ADDON NETFLIX kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessnetf}
+<button onclick='copyToClipboard("${vlessnetf}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlessnetff}
+<button onclick='copyToClipboard("${vlessnetff}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclasnetf}
+<button onclick='copyclash("codenetf")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="codenetf">
+  - name: ${namenetf}
+    server: ${bugnetf}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${bugnetf}.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${bugnetf}.${hostName}
     udp: true  </div> </div>
     <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
 <button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
 <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button><br>
 <button class="button" onclick="showText('cfgxcln')">Vless Xcl Tanpa Addon</button><br>
+<button class="button" onclick="showText('cfgnetf')">Vless Netflix</button><br>
 <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
