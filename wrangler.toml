@@ -1,31 +1,31 @@
-name = "id1"
+name = "sg1"
 main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "id1.porpuse.cfd"
+pattern = "sg1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.id1.porpuse.cfd"
+pattern = "support.zoom.us.sg1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.id1.porpuse.cfd"
+pattern = "graph.instagram.com.sg1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "ava.game.naver.com.id1.porpuse.cfd"
+pattern = "ava.game.naver.com.sg1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "cache.netflix.com.id1.porpuse.cfd"
+pattern = "cache.netflix.com.sg1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "*id1.porpuse.cfd/*"
+pattern = "*sg1.porpuse.cfd/*"
 zone_name = "porpuse.cfd"
 
 [vars]
-PROXYIP = "35.219.50.99"
+PROXYIP = "128.199.228.44"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
