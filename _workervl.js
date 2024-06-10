@@ -1011,7 +1011,7 @@ ${vlessnetff}
 ===========================================
 × Config Openclash
 ===========================================
-${opclasnetf}
+${opclashnetf}
 <button onclick='copyclash("codenetf")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
 ===========================================
 <div hidden id="codenetf">
