@@ -19,7 +19,7 @@ pattern = "ava.game.naver.com.id1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "*id1.porpuse.cfd/*
+pattern = "*id1.porpuse.cfd/*"
 zone_name = "porpuse.cfd"
 
 [vars]
