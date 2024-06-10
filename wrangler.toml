@@ -19,7 +19,7 @@ pattern = "ava.game.naver.com.id1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
-pattern = "cache.netlfix.com.id1.porpuse.cfd"
+pattern = "cache.netflix.com.id1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
