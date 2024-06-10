@@ -1035,6 +1035,8 @@ ${opclashnetf}
 <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button><br>
 <button class="button" onclick="showText('cfgxcln')">Vless Xcl Tanpa Addon</button><br>
 <button class="button" onclick="showText('cfgnetf')">Vless Netflix</button><br>
+<button class="button" onclick="showText('Coming Soon.')">Vless Tsel Ilped</button><br>
+<button class="button" onclick="showText('Coming Soon.')">Vless Isat Edu</button><br>
 <div id="result"></div>
 Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
