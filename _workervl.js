@@ -1029,7 +1029,7 @@ ${opclashnetf}
       path: /vless-bodong
       headers:
         Host: ${bugnetf}.${hostName}
-    udp: true  </div> </div> <div hidden class="divContent" id="soon"> <center><h2>Coming Soon.</h2></center>
+    udp: true  </div> </div> <div hidden class="divContent" id="soon"> <center><h2>Coming Soon.</h2></center></div>
     <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
 <button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
 <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button><br>
