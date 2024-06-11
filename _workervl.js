@@ -1090,14 +1090,20 @@ ${opclashifl}
       headers:
         Host: ${bugifl}.${hostName}
     udp: true  </div> </div> <div hidden class="divContent" id="soon"> <center><h2>Coming Soon.</h2></center></div> <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button>    
- <button class="button" onclick="showText('cfgbiz')">Vless Biz</button>    
- <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button>  
+ 
+ <button class="button" onclick="showText('cfgbiz')">Vless Biz</button>
+     
+ <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button>
+   
  <button class="button" onclick="showText('cfgxcln')">Vless Xcl Tanpa Addon</button>
- <button class="button" onclick="showText('cfgnetf')">Vless Netflix</button>   
+ 
+ <button class="button" onclick="showText('cfgnetf')">Vless Netflix</button>
+    
  <button class="button" onclick="showText('cfgifl')">Vless Iflix</button>
- <button class="button" onclick="showText('soon')">Vless Tsel Ilped</button> 
- <button class="button" onclick="showText('soon')">Vless Isat Edu</button> 
- <div id="result"></div><br>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+ 
+ <button class="button" onclick="showText('soon')">Vless Tsel Ilped</button>
+  
+ <button class="button" onclick="showText('soon')">Vless Isat Edu</button> <div id="result"></div><br>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
