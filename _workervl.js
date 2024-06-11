@@ -1148,7 +1148,7 @@ ${vlessilped}
 × Vless port 80
 ===========================================
 ${vlessilpedd}
-<button onclick='copyToClipboard("${vlesseilpedd}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+<button onclick='copyToClipboard("${vlessilpedd}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
 ===========================================
 × Config Openclash
 ===========================================
@@ -1193,7 +1193,7 @@ ${opclashedu}
 ===========================================
 <div hidden id="codeedu">
   - name: ${nameedu}
-    server: ${hostName}
+    server: ${bugedu}
     port: 443
     type: vless
     uuid: ${userID}
