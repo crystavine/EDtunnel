@@ -705,6 +705,8 @@ const bugxcl = 'graph.instagram.com';
 const bugxcln = 'ava.game.naver.com';
 const bugnetf = 'cache.netflix.com';
 const bugifl = 'acces.iflix.com';
+const bugedu = 'blog.webex.com';
+const bugilped = '104.26.6.171';
 /**
  *
  * @param {string} userID - single or comma separated userIDs
@@ -729,7 +731,14 @@ function getวเลสConfig(userIDs, hostName) {
 	const commonUrlNetff = `:80?encryption=none&security=none&type=ws&host=${bugnetf}.${hostName}&path=%2Fvless-bodong#${namenetf}`;
 //IFLIX
 	const commonUrlIfl = `:443?encryption=none&security=tls&sni=${bugifl}.${hostName}&fp=randomized&type=ws&host=${bugifl}.${hostName}&path=%2Fvless-bodong#${nameifl}`;
-	const commonUrlIfll = `:80?encryption=none&security=none&type=ws&host=${bugifl}.${hostName}&path=%2Fvless-bodong#${nameifl}`;	
+	const commonUrlIfll = `:80?encryption=none&security=none&type=ws&host=${bugifl}.${hostName}&path=%2Fvless-bodong#${nameifl}`;
+//TSEL-ILPED
+	const commonUrlIlped = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=.
+	${hostName}&path=%2Fvless-bodong#${nameilped}`;
+	const commonUrlIlpedd = `:80?encryption=none&security=none&type=ws&host=${hostName}&path=%2Fvless-bodong#${nameilped}`;	
+//ISAT-EDU
+	const commonUrlEdu = `:443?encryption=none&security=tls&sni=${bugedu}.${hostName}&fp=randomized&type=ws&host=${bugedu}.${hostName}&path=%2Fvless-bodong#${nameedu}`;
+	const commonUrlEduu = `:80?encryption=none&security=none&type=ws&host=${bugedu}.${hostName}&path=%2Fvless-bodong#${nameedu}`;			
 
 	const hashSeparator = "################################################################";
 	
@@ -835,8 +844,8 @@ function getวเลสConfig(userIDs, hostName) {
       headers:
         Host: ${bugnetf}.${hostName}
     udp: true`;
-    
-         // SETTINGAN IFLIX
+        
+    // SETTINGAN IFLIX
         const vlessifl = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlIfl;
 		const vlessifll = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlIfll;
 		const opclashifl = `  - name: ${nameifl}
@@ -854,6 +863,44 @@ function getวเลสConfig(userIDs, hostName) {
       headers:
         Host: ${bugifl}.${hostName}
     udp: true`;
+    
+    // SETTINGAN TSEL-ILPED
+        const vlessilped = atob(pt) + '://' + userID + atob(at) + bugilped + commonUrlIlped;
+		const vlessilpedd = atob(pt) + '://' + userID + atob(at) + bugilped + commonUrlIlpedd;
+		const opclashilped = `  - name: ${nameilped}
+    server: ${bugilped}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true`;
+    
+         // SETTINGAN ISAT-EDU
+        const vlessedu = atob(pt) + '://' + userID + atob(at) + bugedu + commonUrlEdu;
+		const vlesseduu = atob(pt) + '://' + userID + atob(at) + bugedu + commonUrlEduu;
+		const opclashedu = `  - name: ${nameedu}
+    server: ${bugedu}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${bugedu}.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${bugedu}.${hostName}
+    udp: true`;
 /*const modifiedHostName = hostName.replace(/^support.zoom.us\./, '');
 
 const vlesssbiz = วเลสMain.replace(new RegExp(hostName, 'g'), modifiedHostName);
@@ -863,10 +910,8 @@ const vlesssbizm = วเลสSec.replace(new RegExp(hostName, 'g'), modifiedHo
 		
     
     const opclashbiz = opclash.replace(new RegExp(hostName, 'g'), modifiedHostName);
-*/    
-
-		
-    if (hostName.includes(bugbiz) || hostName.includes(bugxcl) || hostName.includes(bugxcln) || hostName.includes(bugnetf) || hostName.includes(bugifl))
+*/    		
+    if (hostName.includes(bugbiz) || hostName.includes(bugxcl) || hostName.includes(bugxcln) || hostName.includes(bugnetf) || hostName.includes(bugifl) || hostName.includes(bugedu))
     {    
 return `<center>Gak Ada apa apa disini :).</center>`
 } else {
@@ -1089,7 +1134,79 @@ ${opclashifl}
       path: /vless-bodong
       headers:
         Host: ${bugifl}.${hostName}
-    udp: true  </div> </div> <div hidden class="divContent" id="soon"> <center><h2>Coming Soon.</h2></center></div> <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button>    
+    udp: true  </div> </div> <div hidden class="divContent" id="cfgilped"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket TELKOMSEL ILMUPEDIA kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessilped}
+<button onclick='copyToClipboard("${vlessilped}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlessilpedd}
+<button onclick='copyToClipboard("${vlesseilpedd}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclashilped}
+<button onclick='copyclash("codeilped")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="codeilped">
+  - name: ${nameilped}
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${hostName}
+    udp: true  </div> </div> <div hidden class="divContent" id="cfgedu"> <center><h2>VLESS CLOUDFLARE FREE</h2></center>
+
+<em><span style="color: red;">NOTE:</span> Settingan ini untuk inject paket INDOSAT EDUKASI kalian tinggal salin dan tempel pada apk yang kalian gunakan untuk inject.</em>
+
+
+===========================================
+× Vless port 443
+===========================================
+${vlessedu}
+<button onclick='copyToClipboard("${vlessedu}")'><i class="fa fa-clipboard"></i> Copy vless 443</button>
+===========================================
+× Vless port 80
+===========================================
+${vlesseduu}
+<button onclick='copyToClipboard("${vlesseduu}")'><i class="fa fa-clipboard"></i> Copy vless 80</button>
+===========================================
+× Config Openclash
+===========================================
+${opclashedu}
+<button onclick='copyclash("codeedu")'><i class="fa fa-clipboard"></i> Copy Openclash</button>  
+===========================================
+<div hidden id="codeedu">
+  - name: ${nameedu}
+    server: ${hostName}
+    port: 443
+    type: vless
+    uuid: ${userID}
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ${bugedu}.${hostName}
+    network: ws
+    ws-opts:
+      path: /vless-bodong
+      headers:
+        Host: ${bugedu}.${hostName}
+    udp: true  </div> </div> <center> <button class="button" onclick="showText('cfgvid')">Vless Vidio</button>    
  
  <button class="button" onclick="showText('cfgbiz')">Vless Biz</button>
      
@@ -1101,9 +1218,9 @@ ${opclashifl}
     
  <button class="button" onclick="showText('cfgifl')">Vless Iflix</button>
  
- <button class="button" onclick="showText('soon')">Vless Tsel Ilped</button>
+ <button class="button" onclick="showText('cfgilped')">Vless Tsel Ilped</button>
   
- <button class="button" onclick="showText('soon')">Vless Isat Edu</button> <div id="result"></div><br>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+ <button class="button" onclick="showText('cfgedu')">Vless Isat Edu</button> <div id="result"></div><br>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
