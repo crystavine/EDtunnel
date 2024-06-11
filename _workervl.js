@@ -1206,16 +1206,7 @@ ${opclashedu}
       path: /vless-bodong
       headers:
         Host: ${bugedu}.${hostName}
-    udp: true  </div> </div>
-    <center> <button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br>
-    <button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br>
-    <button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button><br>
-    <button class="button" onclick="showText('cfgxcln')">Vless Xcl Tanpa Addon</button><br>
-    <button class="button" onclick="showText('cfgnetf')">Vless Netflix</button><br>
-    <button class="button" onclick="showText('cfgifl')">Vless Iflix</button><br>
-    <button class="button" onclick="showText('cfgilped')">Vless Tsel Ilped</button><br>
-    <button class="button" onclick="showText('cfgedu')">Vless Isat Edu</button>
-    <div id="result"></div><br>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
+    udp: true  </div> </div> <center><button class="button" onclick="showText('cfgvid')">Vless Vidio</button><br><br><button class="button" onclick="showText('cfgbiz')">Vless Biz</button><br><br><button class="button" onclick="showText('cfgxcl')">Vless Xcl + Addon</button><br><br><button class="button" onclick="showText('cfgxcln')">Vless Xcl Tanpa Addon</button><br><br><button class="button" onclick="showText('cfgnetf')">Vless Netflix</button><br><br><button class="button" onclick="showText('cfgilped')">Vless Tsel Ilped</button><br><br><button class="button" onclick="showText('cfgedu')">Vless Isat Edu</button><br><br><div id="result"></div><br>Chat Telegram saya : <a href="https://t.me/trust_bodong">Klik Disini</a></center>
   `};
 	}).join('\n');
 	const sublink = `https://${hostName}/sub/${userIDArray[0]}?format=clash`
