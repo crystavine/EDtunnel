@@ -23,6 +23,14 @@ pattern = "cache.netflix.com.my1.porpuse.cfd"
 custom_domain = true
 
 [[routes]]
+pattern = "acces.iflix.com.my1.porpuse.cfd"
+custom_domain = true
+
+[[routes]]
+pattern = "blog.webex.com.my1.porpuse.cfd"
+custom_domain = true
+
+[[routes]]
 pattern = "*my1.porpuse.cfd/*"
 zone_name = "porpuse.cfd"
 
