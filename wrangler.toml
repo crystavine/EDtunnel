@@ -1,39 +1,39 @@
-name = "id1"
+name = "my1"
 main = "_workervl.js"
 compatibility_date = "2024-05-13"
 
 [[routes]]
-pattern = "id1.workers2.xyz"
+pattern = "my1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "support.zoom.us.id1.workers2.xyz"
+pattern = "support.zoom.us.my1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "graph.instagram.com.id1.workers2.xyz"
+pattern = "graph.instagram.com.my1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "ava.game.naver.com.id1.workers2.xyz"
+pattern = "ava.game.naver.com.my1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "cache.netflix.com.id1.workers2.xyz"
+pattern = "cache.netflix.com.my1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "acces.iflix.com.id1.workers2.xyz"
+pattern = "acces.iflix.com.ny1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "blog.webex.com.id1.workers2.xyz"
+pattern = "blog.webex.com.my1.workers2.xyz"
 custom_domain = true
 
 [[routes]]
-pattern = "*id1.workers2.xyz/*"
+pattern = "*my1.workers2.xyz/*"
 zone_name = "workers2.xyz"
 
 [vars]
-PROXYIP = "35.219.50.99"
+PROXYIP = "103.75.188.126"
 UUID = "dfc3ad71-4ab8-424e-b5f7-965d18153ccb"
